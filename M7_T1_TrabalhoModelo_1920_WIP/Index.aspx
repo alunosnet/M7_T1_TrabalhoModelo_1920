@@ -2,4 +2,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <!--login-->
+    <div runat="server" id="divLogin"></div>
+    <!--Lista de cursos-->
+    <div runat="server" id="divCursos"></div>
+    <!--Lista disciplinas-->
+    <div runat="server" id="divDisciplinas"></div>
 </asp:Content>

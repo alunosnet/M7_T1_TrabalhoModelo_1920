@@ -67,9 +67,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin\Alunos\adicionar.aspx" />
+    <Content Include="detalhes_curso.aspx" />
+    <Content Include="Erros.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Index.aspx" />
     <Content Include="Logbook.txt" />
+    <Content Include="Logout.aspx" />
     <Content Include="Public\css\bootstrap-grid.css" />
     <Content Include="Public\css\bootstrap-grid.min.css" />
     <Content Include="Public\css\bootstrap-reboot.css" />
@@ -87,6 +91,27 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin\Alunos\adicionar.aspx.cs">
+      <DependentUpon>adicionar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Alunos\adicionar.aspx.designer.cs">
+      <DependentUpon>adicionar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="detalhes_curso.aspx.cs">
+      <DependentUpon>detalhes_curso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="detalhes_curso.aspx.designer.cs">
+      <DependentUpon>detalhes_curso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Erros.aspx.cs">
+      <DependentUpon>Erros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Erros.aspx.designer.cs">
+      <DependentUpon>Erros.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -96,6 +121,13 @@
     </Compile>
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage.Master.cs">
       <DependentUpon>MasterPage.Master</DependentUpon>
@@ -127,14 +159,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Admin\Alunos\" />
     <Folder Include="Admin\Consultas\" />
     <Folder Include="Admin\Disciplinas\" />
     <Folder Include="Admin\Notas\" />
     <Folder Include="Admin\Utilizadores\" />
     <Folder Include="Aluno\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
     <Folder Include="Public\Imagens\" />
   </ItemGroup>
   <PropertyGroup>
