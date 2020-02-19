@@ -68,6 +68,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\Alunos\adicionar.aspx" />
+    <Content Include="Admin\Alunos\editarAluno.aspx" />
+    <Content Include="Admin\Alunos\gerir.aspx" />
+    <Content Include="Admin\Disciplinas\adicionar.aspx" />
     <Content Include="detalhes_curso.aspx" />
     <Content Include="Erros.aspx" />
     <Content Include="Global.asax" />
@@ -96,6 +99,27 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Admin\Alunos\adicionar.aspx.designer.cs">
+      <DependentUpon>adicionar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Alunos\editarAluno.aspx.cs">
+      <DependentUpon>editarAluno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Alunos\editarAluno.aspx.designer.cs">
+      <DependentUpon>editarAluno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Alunos\gerir.aspx.cs">
+      <DependentUpon>gerir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Alunos\gerir.aspx.designer.cs">
+      <DependentUpon>gerir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Disciplinas\adicionar.aspx.cs">
+      <DependentUpon>adicionar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Disciplinas\adicionar.aspx.designer.cs">
       <DependentUpon>adicionar.aspx</DependentUpon>
     </Compile>
     <Compile Include="detalhes_curso.aspx.cs">
@@ -160,7 +184,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Admin\Consultas\" />
-    <Folder Include="Admin\Disciplinas\" />
     <Folder Include="Admin\Notas\" />
     <Folder Include="Admin\Utilizadores\" />
     <Folder Include="Aluno\" />

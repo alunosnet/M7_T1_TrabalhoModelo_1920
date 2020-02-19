@@ -21,7 +21,7 @@
         </EditItemTemplate>
         <InsertItemTemplate>
             Nome:
-            <asp:TextBox MaxLength="60" CssClass="form-control" Text='<%# Bind("nome") %>' runat="server" ID="nomeTextBox" />
+            <asp:TextBox PlaceHolder="Insira aqui o nome do aluno" MaxLength="60" CssClass="form-control" Text='<%# Bind("nome") %>' runat="server" ID="nomeTextBox" />
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
                 ErrorMessage="Campo obrigatório"
                 ControlToValidate="nomeTextBox"
@@ -35,7 +35,7 @@
                 ></asp:CustomValidator>
             <br />
             Morada:
-            <asp:TextBox MaxLength="100" CssClass="form-control" Text='<%# Bind("morada") %>' runat="server" ID="moradaTextBox" />
+            <asp:TextBox  PlaceHolder="Insira aqui a morada do aluno"  MaxLength="100" CssClass="form-control" Text='<%# Bind("morada") %>' runat="server" ID="moradaTextBox" />
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
                 ErrorMessage="Campo obrigatório"
                 ControlToValidate="moradaTextBox"
@@ -49,7 +49,7 @@
                 ></asp:CustomValidator>
             <br />
             Código postal:
-            <asp:TextBox MaxLength="8" CssClass="form-control" Text='<%# Bind("cp") %>' runat="server" ID="cpTextBox" />
+            <asp:TextBox  PlaceHolder="Insira aqui o código postal"  MaxLength="8" CssClass="form-control" Text='<%# Bind("cp") %>' runat="server" ID="cpTextBox" />
             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
                 ErrorMessage="Campo obrigatório"
                 ControlToValidate="cpTextBox"
