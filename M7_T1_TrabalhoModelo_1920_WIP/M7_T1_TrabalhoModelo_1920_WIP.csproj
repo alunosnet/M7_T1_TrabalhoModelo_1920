@@ -68,9 +68,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Admin\Alunos\adicionar.aspx" />
+    <Content Include="Admin\Alunos\apagarAluno.aspx" />
     <Content Include="Admin\Alunos\editarAluno.aspx" />
     <Content Include="Admin\Alunos\gerir.aspx" />
     <Content Include="Admin\Disciplinas\adicionar.aspx" />
+    <Content Include="Admin\Disciplinas\gerir.aspx" />
+    <Content Include="Admin\Disciplinas\pesquisar.aspx" />
     <Content Include="detalhes_curso.aspx" />
     <Content Include="Erros.aspx" />
     <Content Include="Global.asax" />
@@ -101,6 +104,13 @@
     <Compile Include="Admin\Alunos\adicionar.aspx.designer.cs">
       <DependentUpon>adicionar.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\Alunos\apagarAluno.aspx.cs">
+      <DependentUpon>apagarAluno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Alunos\apagarAluno.aspx.designer.cs">
+      <DependentUpon>apagarAluno.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\Alunos\editarAluno.aspx.cs">
       <DependentUpon>editarAluno.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -121,6 +131,20 @@
     </Compile>
     <Compile Include="Admin\Disciplinas\adicionar.aspx.designer.cs">
       <DependentUpon>adicionar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Disciplinas\gerir.aspx.cs">
+      <DependentUpon>gerir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Disciplinas\gerir.aspx.designer.cs">
+      <DependentUpon>gerir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Disciplinas\pesquisar.aspx.cs">
+      <DependentUpon>pesquisar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Disciplinas\pesquisar.aspx.designer.cs">
+      <DependentUpon>pesquisar.aspx</DependentUpon>
     </Compile>
     <Compile Include="detalhes_curso.aspx.cs">
       <DependentUpon>detalhes_curso.aspx</DependentUpon>

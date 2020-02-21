@@ -7,10 +7,11 @@
     <asp:Button CssClass="btn btn-info" ID="Button1" runat="server" Text="Pesquisar" />
     <asp:GridView CssClass="table" ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="nprocesso" DataSourceID="SqlAlunos">
         <Columns>
+            <asp:HyperLinkField DataNavigateUrlFields="nprocesso" DataNavigateUrlFormatString="editarAluno.aspx?nprocesso={0}" Text="Editar" HeaderText="Editar"></asp:HyperLinkField>
+            <asp:HyperLinkField DataNavigateUrlFields="nprocesso" DataNavigateUrlFormatString="apagarAluno.aspx?nprocesso={0}" Text="Apagar" HeaderText="Apagar"></asp:HyperLinkField>
             <asp:BoundField DataField="nprocesso" HeaderText="nprocesso" ReadOnly="True" InsertVisible="False" SortExpression="nprocesso"></asp:BoundField>
             <asp:BoundField DataField="nome" HeaderText="nome" SortExpression="nome"></asp:BoundField>
             <asp:ImageField ControlStyle-Width="200px" DataImageUrlField="nprocesso" DataImageUrlFormatString="~/Public/Imagens/{0}.jpg" ReadOnly="True" HeaderText="Fotografia"></asp:ImageField>
-            <asp:HyperLinkField DataNavigateUrlFields="nprocesso" DataNavigateUrlFormatString="editarAluno.aspx?nprocesso={0}" Text="Editar" HeaderText="Editar"></asp:HyperLinkField>
         </Columns>
     </asp:GridView>
     <asp:SqlDataSource runat="server" ID="SqlAlunos" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' SelectCommand="SELECT [nprocesso], [nome] FROM [alunos] WHERE ([nome] LIKE '%' + @nome + '%')">
