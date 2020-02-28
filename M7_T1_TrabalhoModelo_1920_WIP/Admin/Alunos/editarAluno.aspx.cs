@@ -11,6 +11,12 @@ namespace M7_T1_TrabalhoModelo_1920_WIP.Admin.Alunos
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            //todo: admin
+
+            //no cache
+            Response.Cache.SetNoStore();
+            Response.Cache.AppendCacheExtension("no-cache");
+            Response.Expires = 0;
 
         }
         protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)

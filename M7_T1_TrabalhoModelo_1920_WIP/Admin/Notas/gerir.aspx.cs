@@ -5,13 +5,14 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace M7_T1_TrabalhoModelo_1920_WIP.Admin.Disciplinas
+namespace M7_T1_TrabalhoModelo_1920_WIP.Admin.Notas
 {
-    public partial class pesquisar : System.Web.UI.Page
+    public partial class gerir : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //todo:página para admin
+            //TODO: página para admin
+            //TODO: Terminar esta página porque agora vamos almoçar!!!!
         }
     }
 }
