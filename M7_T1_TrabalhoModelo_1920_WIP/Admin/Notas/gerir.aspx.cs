@@ -11,8 +11,21 @@ namespace M7_T1_TrabalhoModelo_1920_WIP.Admin.Notas
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //TODO: página para admin
-            //TODO: Terminar esta página porque agora vamos almoçar!!!!
+            // página para admin
+            if (Session["perfil"] == null || Session["perfil"].Equals("0") == false)
+                Response.Redirect("~/index.aspx");
+            //TODO: adicionar a coluna com o nome do aluno e da disciplina
+        }
+        protected void CustomValidator1_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            DateTime data = DateTime.Parse(args.Value);
+
+            if (data > DateTime.Now.Date)
+            {
+                args.IsValid = false;
+                return;
+            }
+            args.IsValid = true;
         }
     }
 }

@@ -34,7 +34,13 @@
             </asp:TemplateField>
             <asp:TemplateField HeaderText="nprocesso" SortExpression="nprocesso">
                 <EditItemTemplate>
-                    <asp:TextBox runat="server" Text='<%# Bind("nprocesso") %>' ID="TextBox2"></asp:TextBox>
+                    <asp:DropDownList CssClass="form-control" ID="DropDownList2" runat="server" SelectedValue='<%# Bind("nprocesso") %>' DataSourceID="SqlAlunos" DataTextField="nome" DataValueField="nprocesso"></asp:DropDownList>
+                    <asp:SqlDataSource runat="server" ID="SqlAlunos" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' SelectCommand="SELECT [nprocesso], [nome] FROM [alunos] ORDER BY [nome]"></asp:SqlDataSource>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"
+                        CssClass="alert-danger" Display="Dynamic"
+                        ControlToValidate="DropDownList2"
+                        ErrorMessage="Campo obrigatório"></asp:RequiredFieldValidator>
+
                 </EditItemTemplate>
                 <ItemTemplate>
                     <asp:Label runat="server" Text='<%# Bind("nprocesso") %>' ID="Label2"></asp:Label>
@@ -42,7 +48,17 @@
             </asp:TemplateField>
             <asp:TemplateField HeaderText="valor" SortExpression="valor">
                 <EditItemTemplate>
-                    <asp:TextBox runat="server" Text='<%# Bind("valor") %>' ID="TextBox3"></asp:TextBox>
+                    <asp:TextBox TextMode="Number" PlaceHolder="Insira a nota do módulo" CssClass="form-control" Text='<%# Bind("valor") %>' runat="server" ID="valorTextBox" />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server"
+                        CssClass="alert-danger" Display="Dynamic"
+                        ControlToValidate="valorTextBox"
+                        ErrorMessage="Campo obrigatório"></asp:RequiredFieldValidator>
+                    <asp:RangeValidator ID="RangeValidator1" runat="server"
+                        CssClass="alert-danger" Display="Dynamic"
+                        Type="Integer" MinimumValue="0" MaximumValue="20"
+                        ControlToValidate="valorTextBox"
+                        ErrorMessage="A nota deve estar entre 0 e 20"></asp:RangeValidator>
+
                 </EditItemTemplate>
                 <ItemTemplate>
                     <asp:Label runat="server" Text='<%# Bind("valor") %>' ID="Label3"></asp:Label>
@@ -50,7 +66,16 @@
             </asp:TemplateField>
             <asp:TemplateField HeaderText="data" SortExpression="data">
                 <EditItemTemplate>
-                    <asp:TextBox TextMode="Date" runat="server" Text='<%# Bind("data","{0:yyyy-MM-dd}") %>' ID="TextBox4"></asp:TextBox>
+                    <asp:TextBox TextMode="Date" CssClass="form-control" Text='<%# Bind("data","{0:yyyy-MM-dd}") %>' runat="server" ID="dataTextBox" />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server"
+                        CssClass="alert-danger" Display="Dynamic"
+                        ControlToValidate="dataTextBox"
+                        ErrorMessage="Campo obrigatório"></asp:RequiredFieldValidator>
+                    <asp:CustomValidator ID="CustomValidator1" runat="server"
+                        CssClass="alert-danger" Display="Dynamic"
+                        ControlToValidate="dataTextBox" OnServerValidate="CustomValidator1_ServerValidate"
+                        ErrorMessage="A data não é válida. Deve ser anterior ou igual à data atual."></asp:CustomValidator>
+
                 </EditItemTemplate>
                 <ItemTemplate>
                     <asp:Label runat="server" Text='<%# Bind("data","{0:dd-MM-yyyy}") %>' ID="Label4"></asp:Label>
@@ -58,7 +83,17 @@
             </asp:TemplateField>
             <asp:TemplateField HeaderText="nrmodulo" SortExpression="nrmodulo">
                 <EditItemTemplate>
-                    <asp:TextBox runat="server" Text='<%# Bind("nrmodulo") %>' ID="TextBox5"></asp:TextBox>
+                    <asp:TextBox TextMode="Number" PlaceHolder="Insira o nº do módulo" CssClass="form-control" Text='<%# Bind("nrmodulo") %>' runat="server" ID="nrmoduloTextBox" />
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server"
+                        CssClass="alert-danger" Display="Dynamic"
+                        ControlToValidate="nrmoduloTextBox"
+                        ErrorMessage="Campo obrigatório"></asp:RequiredFieldValidator>
+                    <asp:RangeValidator ID="RangeValidator2" runat="server"
+                        CssClass="alert-danger" Display="Dynamic"
+                        Type="Integer" MinimumValue="1" MaximumValue="20"
+                        ControlToValidate="nrmoduloTextBox"
+                        ErrorMessage="O número do módulo deve estar entre 0 e 20"></asp:RangeValidator>
+
                 </EditItemTemplate>
                 <ItemTemplate>
                     <asp:Label runat="server" Text='<%# Bind("nrmodulo") %>' ID="Label5"></asp:Label>

@@ -11,7 +11,9 @@ namespace M7_T1_TrabalhoModelo_1920_WIP.Admin.Alunos
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //todo: admin
+            // página para admin
+            if (Session["perfil"] == null || Session["perfil"].Equals("0") == false)
+                Response.Redirect("~/index.aspx");
 
             //no cache
             Response.Cache.SetNoStore();

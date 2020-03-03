@@ -11,7 +11,8 @@ namespace M7_T1_TrabalhoModelo_1920_WIP
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session.Clear();
+            Response.Redirect("index.aspx");
         }
     }
 }
