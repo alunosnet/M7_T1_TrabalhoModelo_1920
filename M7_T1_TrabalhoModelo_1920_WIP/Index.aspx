@@ -25,7 +25,15 @@
         </asp:SqlDataSource>
     </div>
     <!--Lista de cursos-->
-    <div runat="server" id="divCursos"></div>
+    <div runat="server" id="divCursos">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlCursos">
+            <Columns>
+                <asp:BoundField DataField="curso" HeaderText="curso" SortExpression="curso"></asp:BoundField>
+                <asp:HyperLinkField DataNavigateUrlFields="curso" DataNavigateUrlFormatString="detalhes_curso.aspx?curso={0}" Text="Ver ..." HeaderText="Mais detalhes"></asp:HyperLinkField>
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource runat="server" ID="SqlCursos" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' SelectCommand="SELECT DISTINCT [curso] FROM [disciplinas] ORDER BY [curso]"></asp:SqlDataSource>
+    </div>
     <!--Lista disciplinas-->
     <div runat="server" id="divDisciplinas"></div>
 </asp:Content>

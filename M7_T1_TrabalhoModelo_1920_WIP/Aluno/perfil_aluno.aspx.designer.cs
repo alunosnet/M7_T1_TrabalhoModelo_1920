@@ -7,29 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace M7_T1_TrabalhoModelo_1920_WIP
+namespace M7_T1_TrabalhoModelo_1920_WIP.Aluno
 {
 
 
-    public partial class detalhes_curso
+    public partial class perfil_aluno
     {
 
         /// <summary>
-        /// ListView1 control.
+        /// FormView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView ListView1;
+        protected global::System.Web.UI.WebControls.FormView FormView1;
 
         /// <summary>
-        /// SqlDisciplinas control.
+        /// SqlAluno control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDisciplinas;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlAluno;
     }
 }
