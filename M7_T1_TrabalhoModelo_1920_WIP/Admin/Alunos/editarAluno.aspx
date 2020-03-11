@@ -72,7 +72,6 @@
             <br />
             Fotografia:
             <asp:FileUpload CssClass="form-control" ID="FileUpload1" runat="server" />
-            
             <br />
             <asp:LinkButton runat="server" Text="Update" CommandName="Update" ID="UpdateButton" CausesValidation="True" />&nbsp;<asp:LinkButton runat="server" Text="Cancel" CommandName="Cancel" ID="UpdateCancelButton" CausesValidation="False" />
         </EditItemTemplate>

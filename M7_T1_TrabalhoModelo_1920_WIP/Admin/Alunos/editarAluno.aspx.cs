@@ -37,7 +37,11 @@ namespace M7_T1_TrabalhoModelo_1920_WIP.Admin.Alunos
         {
             string texto = args.Value.Trim();
 
-            //TODO: verificar tamanho do cp
+            if (texto.Length != 8)
+            {
+                args.IsValid = false;
+                return;
+            }
             //validar a posição do -
             //if(texto.IndexOf('-')!=4)
             if (texto[4] != '-')

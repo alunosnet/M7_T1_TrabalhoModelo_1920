@@ -12,10 +12,18 @@
             Nome:
             <asp:Label CssClass="form-control" Text='<%# Bind("nome") %>' runat="server" ID="nomeTextBox" /><br />
             Morada:
-            <asp:TextBox CssClass="form-control" Text='<%# Bind("morada") %>' runat="server" ID="moradaTextBox" /><br />
-            Código postal:
-            <asp:TextBox CssClass="form-control" Text='<%# Bind("cp") %>' runat="server" ID="cpTextBox" /><br />
-            Data nascimento:
+            <asp:TextBox MaxLength="100"  CssClass="form-control" Text='<%# Bind("morada") %>' runat="server" ID="moradaTextBox" />
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                CssClass="alert-danger" Display="Dynamic"
+                ControlToValidate="moradaTextBox"
+                ErrorMessage="O campo é obrigatório"></asp:RequiredFieldValidator>
+            <br />Código postal:
+            <asp:TextBox MaxLength="8" CssClass="form-control" Text='<%# Bind("cp") %>' runat="server" ID="cpTextBox" />
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
+                CssClass="alert-danger" Display="Dynamic"
+                ControlToValidate="cpTextBox"                
+                ErrorMessage="O campo é obrigatório."></asp:RequiredFieldValidator>            
+            <br />Data nascimento:
             <asp:Label CssClass="form-control" Text='<%# Bind("data_nascimento","{0:dd-MM-yyy}") %>' runat="server" ID="data_nascimentoTextBox" /><br />
             Género:
             <asp:Label CssClass="form-control" Text='<%# Bind("genero") %>' runat="server" ID="generoTextBox" /><br />

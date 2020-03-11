@@ -8,13 +8,11 @@
         <AlternatingItemTemplate>
             <tr style="">
                 <td>
-                    <asp:Label Text='<%# Eval("id") %>' runat="server" ID="idLabel" /></td>
+                    <asp:Label CssClass="form-control" Text='<%# Eval("nome") %>' runat="server" ID="nomeLabel" /></td>
                 <td>
-                    <asp:Label Text='<%# Eval("nome") %>' runat="server" ID="nomeLabel" /></td>
+                    <asp:Label CssClass="form-control" Text='<%# Eval("nrmodulos") %>' runat="server" ID="nrmodulosLabel" /></td>
                 <td>
-                    <asp:Label Text='<%# Eval("nrmodulos") %>' runat="server" ID="nrmodulosLabel" /></td>
-                <td>
-                    <asp:Label Text='<%# Eval("curso") %>' runat="server" ID="cursoLabel" /></td>
+                    <asp:Label CssClass="form-control" Text='<%# Eval("curso") %>' runat="server" ID="cursoLabel" /></td>
             </tr>
         </AlternatingItemTemplate>
         <EditItemTemplate>
@@ -34,9 +32,9 @@
             </tr>
         </EditItemTemplate>
         <EmptyDataTemplate>
-            <table runat="server" style="">
+            <table class="table" runat="server" style="">
                 <tr>
-                    <td>No data was returned.</td>
+                    <td>Não existem dados.</td>
                 </tr>
             </table>
         </EmptyDataTemplate>
@@ -58,22 +56,19 @@
         <ItemTemplate>
             <tr style="">
                 <td>
-                    <asp:Label Text='<%# Eval("id") %>' runat="server" ID="idLabel" /></td>
+                    <asp:Label CssClass="form-control" Text='<%# Eval("nome") %>' runat="server" ID="nomeLabel" /></td>
                 <td>
-                    <asp:Label Text='<%# Eval("nome") %>' runat="server" ID="nomeLabel" /></td>
+                    <asp:Label CssClass="form-control" Text='<%# Eval("nrmodulos") %>' runat="server" ID="nrmodulosLabel" /></td>
                 <td>
-                    <asp:Label Text='<%# Eval("nrmodulos") %>' runat="server" ID="nrmodulosLabel" /></td>
-                <td>
-                    <asp:Label Text='<%# Eval("curso") %>' runat="server" ID="cursoLabel" /></td>
+                    <asp:Label CssClass="form-control" Text='<%# Eval("curso") %>' runat="server" ID="cursoLabel" /></td>
             </tr>
         </ItemTemplate>
         <LayoutTemplate>
-            <table runat="server">
+            <table class="table" runat="server">
                 <tr runat="server">
                     <td runat="server">
-                        <table runat="server" id="itemPlaceholderContainer" style="" border="0">
+                        <table class="table" runat="server" id="itemPlaceholderContainer" style="" border="0">
                             <tr runat="server" style="">
-                                <th runat="server">id</th>
                                 <th runat="server">nome</th>
                                 <th runat="server">nrmodulos</th>
                                 <th runat="server">curso</th>
@@ -89,8 +84,6 @@
         </LayoutTemplate>
         <SelectedItemTemplate>
             <tr style="">
-                <td>
-                    <asp:Label Text='<%# Eval("id") %>' runat="server" ID="idLabel" /></td>
                 <td>
                     <asp:Label Text='<%# Eval("nome") %>' runat="server" ID="nomeLabel" /></td>
                 <td>

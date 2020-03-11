@@ -36,7 +36,13 @@
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
                 CssClass="alert-danger" Display="Dynamic"
                 ControlToValidate="DropDownList1"
-                ErrorMessage="Campo obrigatório"></asp:RequiredFieldValidator><br />
+                ErrorMessage="Campo obrigatório"></asp:RequiredFieldValidator>
+            <asp:CustomValidator ID="CustomValidator2" runat="server" 
+                CssClass="alert-danger" Display="Dynamic"
+                ControlToValidate="DropDownList1"
+                ErrorMessage="Este aluno já tem nota nesta disciplina e módulo"
+                OnServerValidate="CustomValidator2_ServerValidate" ></asp:CustomValidator>
+            <br />
             Nº processo:
             <asp:DropDownList CssClass="form-control" ID="DropDownList2" runat="server" SelectedValue='<%# Bind("nprocesso") %>' DataSourceID="SqlAlunos" DataTextField="nome" DataValueField="nprocesso"></asp:DropDownList>
             <asp:SqlDataSource runat="server" ID="SqlAlunos" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' SelectCommand="SELECT [nprocesso], [nome] FROM [alunos] ORDER BY [nome]"></asp:SqlDataSource>

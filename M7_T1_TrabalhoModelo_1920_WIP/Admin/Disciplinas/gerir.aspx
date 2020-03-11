@@ -15,7 +15,7 @@
             </asp:TemplateField>
 
             <asp:BoundField DataField="id" HeaderText="id" ReadOnly="True" InsertVisible="False" SortExpression="id"></asp:BoundField>
-            <asp:TemplateField HeaderText="nome" SortExpression="nome">
+            <asp:TemplateField HeaderText="Nome" SortExpression="nome">
                 <EditItemTemplate>
                     <asp:TextBox  MaxLength="40" CssClass="form-control" runat="server" Text='<%# Bind("nome") %>' ID="nomeTextBox"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
@@ -34,7 +34,7 @@
                     <asp:Label runat="server" Text='<%# Bind("nome") %>' ID="Label1"></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
-            <asp:TemplateField HeaderText="nrmodulos" SortExpression="nrmodulos">
+            <asp:TemplateField HeaderText="Nº módulos" SortExpression="nrmodulos">
                 <EditItemTemplate>
                     <asp:TextBox CssClass="form-control" TextMode="Number" runat="server" Text='<%# Bind("nrmodulos") %>' ID="nrmodulosTextBox"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
@@ -53,7 +53,7 @@
                     <asp:Label runat="server" Text='<%# Bind("nrmodulos") %>' ID="Label2"></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
-            <asp:TemplateField HeaderText="curso" SortExpression="curso">
+            <asp:TemplateField HeaderText="Curso" SortExpression="curso">
                 <EditItemTemplate>
                     <asp:TextBox MaxLength="40" CssClass="form-control" runat="server" Text='<%# Bind("curso") %>' ID="cursoTextBox"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 

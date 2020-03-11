@@ -2,4 +2,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<h2>Erro inesperado</h2>
+    <p>Ocorreu um erro inesperado. Tente novamente a operação que estava a realizar.</p>
 </asp:Content>

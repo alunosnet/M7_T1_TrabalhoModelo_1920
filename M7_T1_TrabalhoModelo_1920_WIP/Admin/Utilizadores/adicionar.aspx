@@ -17,21 +17,25 @@
         </EditItemTemplate>
         <InsertItemTemplate>
             Nome:
-            <asp:TextBox MaxLength="40" CssClass="form-control" Text='<%# Bind("nome") %>' runat="server" ID="nomeTextBox" />
+            <asp:TextBox PlaceHolder="Nome de utilizador" MaxLength="40" CssClass="form-control" Text='<%# Bind("nome") %>' runat="server" ID="nomeTextBox" />
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
                 CssClass="alert-danger" Display="Dynamic"
                 ControlToValidate="nomeTextBox"
                 ErrorMessage="Campo obrigatório"></asp:RequiredFieldValidator>
+            <asp:CustomValidator ID="CustomValidator1" runat="server" 
+                CssClass="alert-danger" Display="Dynamic"
+                ControlToValidate="nomeTextBox" OnServerValidate="CustomValidator1_ServerValidate"
+                ErrorMessage="Nome de utilizador já existe"></asp:CustomValidator>
             <br />
             Palavra passe:
-            <asp:TextBox TextMode="Password" CssClass="form-control"  Text='<%# Bind("palavra_passe") %>' runat="server" ID="palavra_passeTextBox" />
+            <asp:TextBox PlaceHolder="Palavra passe" TextMode="Password" CssClass="form-control"  Text='<%# Bind("palavra_passe") %>' runat="server" ID="palavra_passeTextBox" />
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
                 CssClass="alert-danger" Display="Dynamic"
                 ControlToValidate="palavra_passeTextBox"
                 ErrorMessage="Campo obrigatório"></asp:RequiredFieldValidator>
             <br />
             Confirmar a palavra passe:
-            <asp:TextBox TextMode="Password" CssClass="form-control"  runat="server" ID="confirmaPP" />
+            <asp:TextBox PlaceHolder="Repita a palavra passe" TextMode="Password" CssClass="form-control"  runat="server" ID="confirmaPP" />
             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
                 CssClass="alert-danger" Display="Dynamic"
                 ControlToValidate="confirmaPP"
@@ -48,7 +52,7 @@
             <asp:SqlDataSource runat="server" ID="SqlAlunos" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' SelectCommand="SELECT [nprocesso], [nome] FROM [alunos]
 where nprocesso not in (SELECT nprocesso from utilizadores where nprocesso is not null)"></asp:SqlDataSource>
             <br />
-            <asp:LinkButton runat="server" Text="Insert" CommandName="Insert" ID="InsertButton" CausesValidation="True" />&nbsp;<asp:LinkButton runat="server" Text="Cancel" CommandName="Cancel" ID="InsertCancelButton" CausesValidation="False" />
+            <asp:LinkButton CssClass="btn btn-danger" runat="server" Text="Insert" CommandName="Insert" ID="InsertButton" CausesValidation="True" />&nbsp;<asp:LinkButton CssClass="btn btn-info" runat="server" Text="Cancel" CommandName="Cancel" ID="InsertCancelButton" CausesValidation="False" />
         </InsertItemTemplate>
         <ItemTemplate>
             nome:
